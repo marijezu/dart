@@ -10,9 +10,9 @@
 
 ### 💡 Descripción
 
-Este repositorio contiene una recopilación de **relaciones de ejercicios en Dart**, realizados durante el módulo de **Programación Multimedia y de Dispositivos Móviles** del ciclo **Desarrollo de Aplicaciones Multiplataforma (DAM)** en el **IES Playamar**.
+Este repositorio contiene una recopilación de **relaciones de ejercicios en Dart**, realizados durante el módulo de **Programación Multimedia y de Dispositivos Móviles** del ciclo **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
-Los ejercicios están organizados en cuatro bloques, cada uno con su correspondiente documento PDF, que muestran una evolución progresiva en el aprendizaje del lenguaje **Dart**, desde sus fundamentos hasta la programación orientada a objetos y el testing.
+Los ejercicios están organizados en cuatro relaciones, en las que se practican diferentes ejercicios para el aprendizaje del lenguaje **Dart**.
 
 ---
 
@@ -60,5 +60,4 @@ Los ejercicios están organizados en cuatro bloques, cada uno con su correspondi
 
 ---
 
-### 🗂️ Estructura del repositorio
 

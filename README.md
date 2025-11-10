@@ -3,9 +3,8 @@
 </p>
 
 <p align="center">
-  <img src="https://media.tenor.com/IF2JdxzmyN4AAAAj/coding-girl.gif" width="260"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Z5NWlycDRsdXB0ZHpqM2Nqcmh6aDR2bWdudG9ub2dsbXo4aXQ1dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qgQUggAC3Pfv687qPC/giphy.gif" width="280"/>
 </p>
-
 
 ---
 

@@ -3,26 +3,37 @@ división entre dos números enteros positivos utilizando el algoritmo de Euclid
 calcula el resto. Los dos números serán parámetros de entrada, y la función devolverá el
 resultado al punto de la llamada. Ambos números serán inicializados en el propio programa.*/
 
-void main(){
-  int cocientePorRestas(int a, int b) {
-    int q = 0;
-    int r = a;
-    while (r >= b) {
-      r -= b;
-      q++;
-    }
-    return q;
+int cocientePorRestas(int dividendo, int divisor) {
+  int cociente = 0;
+  int resto = dividendo;
+
+  while (resto >= divisor) {
+    resto = resto - divisor;   
+    cociente = cociente + 1; 
   }
 
-  print(cocientePorRestas(18, 5));
+  return cociente;
+}
 
-  int restoPorRestas(int a, int b) {
-    int r = a;
-    while (r >= b) {
-      r -= b;
-    }
-    return r;
+int restoPorRestas(int dividendo, int divisor) {
+  int resto = dividendo;
+
+  while (resto >= divisor) {
+    //Resto el divisor hasta que el resto sea menor
+    resto = resto - divisor;
   }
-  print(restoPorRestas(18, 5));
 
+  return resto;
+}
+
+void main() {
+  int num1 = 13;
+  int num2 = 5;
+
+  int cociente = cocientePorRestas(num1, num2);
+  int resto = restoPorRestas(num1, num2);
+
+  print("Dividiendo $num1 entre divisor $num2:");
+  print("Cociente = $cociente");
+  print("Resto = $resto");
 }

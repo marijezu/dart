@@ -1,73 +1,105 @@
 /*12- Soluciona el problema anterior mediante la declaración de un Map y haciendo que cada
 función, en lugar de devolver valores, muestran los resultados por pantalla ellas mismas.*/
 
-void main() {
-  // Creo un mapa con las temperaturas y los dias
-  Map<String, double> temperaturas = {"dia 1" : 35, "dia 2" : 40, "dia 3" : 42, "dia 4" : 45, "dia 5" : 39, "dia 6" : 46};
-  print("Mapa de temperaturas: $temperaturas");
 
-  String diaTemperaturaMaxima(Map <String, double> temperaturas){
-    String diaMax= "";
-    double tempMax= 0;
-      // Recorro el mapa para calcular el dia que ha tenido la temperatura maxima
+  //Asigno como tempMax la primera temperatura
+  //temperaturas.values devuelve solo los valores del mapa
+
+  //Tambien se puede hacer asi, convirtiendo en una lista y cogiendo el 1er valor
+  //double tempMax = temperaturas.values.toList()[0];
+
+  void mostrarTemperaturaMaxima(Map<String, double> temperaturas) {
+  bool hayDatos = true;
+  double tempMax = 0;
+  String diaMax = "";
+
+  if (temperaturas.isEmpty) {
+    hayDatos = false;
+  } else {
+  //Asigno como tempMax la primera temperatura
+  //temperaturas.values devuelve solo los valores del mapa
+  //temperaturas.keys devuelve solo los valores de las clave
+    tempMax = temperaturas.values.first;
+  //Tambien se puede hacer asi, convirtiendo en una lista y cogiendo el 1er valor
+  //double tempMax = temperaturas.values.toList()[0];
+
     temperaturas.forEach((dia, temp) {
       if (temp > tempMax) {
+        tempMax = temp;
         diaMax = dia;
       }
     });
-    return diaMax;
   }
 
-  
-  double temperaturaMaxima(Map <String, double> temperaturas){
-    double tempMax= 0;
-      // Recorro el mapa para calcular los valores
-    temperaturas.forEach((dia, temp) {
-      if (temp > tempMax) {
-        tempMax=temp;
-      }
-    });
-    return  tempMax;
+  if (hayDatos) {
+    print("La temperatura máxima fue de $tempMax grados el $diaMax");
+  } else {
+    print("No hay datos de temperatura disponibles.");
   }
+}
 
+void mostrarTemperaturaMinima(Map<String, double> temperaturas) {
+  bool hayDatos = true;
+  double tempMin = 0;
+  String diaMin = "";
 
-  String diaTemperaturaMinima(Map <String, double> temperaturas){
-    String diaMin= "";
-    double tempMin= temperaturaMaxima(temperaturas);
-      // Recorro el mapa para calcular el dia que ha tenido la temperatura maxima
+  if (temperaturas.isEmpty) {
+    hayDatos = false;
+  } else {
+    tempMin = temperaturas.values.first;
+
     temperaturas.forEach((dia, temp) {
       if (temp < tempMin) {
+        tempMin = temp;
         diaMin = dia;
       }
     });
-    return diaMin;
   }
 
-    double temperaturaMinima(Map <String, double> temperaturas){
-      double tempMin= temperaturaMaxima(temperaturas);
-      // Recorro el mapa para calcular los valores
-      temperaturas.forEach((dia, temp) {
-        if (temp < tempMin) {
-          tempMin=temp;
-        }
-      });
-      return  tempMin;
-    }
-
-  double temperaturaMedia(Map<String, double> temperaturas){
-    double suma = 0.00;
-      // Recorro el mapa para calcular los valores
-    temperaturas.forEach((dia, temp) {
-      suma=suma + temp;
-    });
-
-    int longitud = temperaturas.length;
-    double media = (suma / longitud).roundToDouble();
-
-    return media;
+  if (hayDatos) {
+    print("La temperatura mínima fue de $tempMin grados el $diaMin");
+  } else {
+    print("No hay datos de temperatura disponibles.");
   }
-
-  print("La temperatura máxima registrada fue el dia ${diaTemperaturaMaxima(temperaturas)} y han sido: ${temperaturaMaxima(temperaturas)} grados");
-  print("La temperatura máxima registrada fue el dia ${diaTemperaturaMinima(temperaturas)} y han sido: ${temperaturaMinima(temperaturas)} grados");
-  print("La temperatura media registrada ha sido: ${temperaturaMedia(temperaturas)}");
 }
+
+void mostrarTemperaturaMedia(Map<String, double> temperaturas) {
+  bool hayDatos = true;
+  double suma = 0;
+  double media = 0;
+
+  if (temperaturas.isEmpty) {
+    hayDatos = false;
+  } else {
+    temperaturas.forEach((dia, temp) {
+      suma = suma + temp;
+    });
+    media = suma / temperaturas.length;
+    //Redondeo la media a 2 decimales
+    media = (media * 100).roundToDouble() / 100;
+  }
+
+  if (hayDatos) {
+    print("La temperatura media ha sido de ${media} grados");
+  } else {
+    print("No hay datos de temperatura disponibles.");
+  }
+}
+
+void main() {
+  Map<String, double> temperaturas = {
+    "Día 1": 35,
+    "Día 2": 40,
+    "Día 3": 42,
+    "Día 4": 45,
+    "Día 5": 39,
+    "Día 6": 46
+  };
+
+  print("Mapa de temperaturas: $temperaturas\n");
+
+  mostrarTemperaturaMaxima(temperaturas);
+  mostrarTemperaturaMinima(temperaturas);
+  mostrarTemperaturaMedia(temperaturas);
+}
+

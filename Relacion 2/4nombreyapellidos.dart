@@ -4,17 +4,12 @@ apellido, en cuyo caso se considerará null (nullable parameter), cosa que deber
 la función adecuadamente. (Función con parámetros posicionales y sin devolución de valor
 de retorno)
 */
+ void mostrarEmpleadoNombreApellidos(String nombre, [String? apellidos]) {
+  final texto = (apellidos == null) ? nombre : "$nombre $apellidos";
+  print("Empleado - $texto");
+}
 
-void main(){
-  void mostrarEmpleadoNombreApellidos(String nombre, [String? apellidos]) {
-
-    if(apellidos == null){
-      print("El empleado se llama:  $nombre");
-    }else{
-      print("El empleado se llama: $nombre y sus apellidos son: $apellidos");
-    }
-  }
-
+void main() {
   mostrarEmpleadoNombreApellidos("Maria Jesus", "Serrano Serrano");
   mostrarEmpleadoNombreApellidos("Raquel");
 }

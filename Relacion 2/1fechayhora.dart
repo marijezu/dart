@@ -1,12 +1,10 @@
 /*1- Vamos a declarar en un programa Dart una función sin parámetros ni valores devueltos,
 que únicamente muestre por pantalla la fecha y la hora actuales (DateTime.now() ).*/
 
-void main(){
-  void mostrarAhora() {
-    print("Ahora: ${DateTime.now()}");
-  }
-
-  mostrarAhora();
+void mostrarAhora() {
+  print("Ahora: ${DateTime.now()}");
 }
 
-
+void main() {
+  mostrarAhora();
+}

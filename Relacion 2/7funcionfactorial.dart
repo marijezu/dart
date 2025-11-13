@@ -2,11 +2,20 @@
 un valor entero y positivo. La función tendrá a n como parámetro de entrada y devolverá el
 valor de la suma al punto de la llamada*/
 
-void main(){
-  int factorial(int n) {
-    int f = 1;
-    for (int i = 1; i <= n; i++) f *= i;
-    return f;
+int factorial(int n) {
+  int f = 1;
+
+  // Va multiplicando cada numero y lo acumula en f
+  for (int i = 1; i <= n; i++) {
+    f = f * i; 
   }
-  print(factorial(5));
+
+  return f;
+}
+
+void main() {
+  int n = 5;
+  int resultado = factorial(n);
+
+  print("El factorial de $n es: $resultado");
 }

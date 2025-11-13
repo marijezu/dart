@@ -3,12 +3,17 @@ reciba un parámetro: las horas hacia adelante o atrás a partir del momento act
 y muestre esa fecha/hora. Investiga en la librería dart:core los métodos disponibles para el
 manejo de DateTime. Utiliza el método add en este caso, pero experimenta otros.*/
 
-void main(){
-  void mostrarConDesplazamiento(int horas) {
-    final ahora = DateTime.now();
-    final futura = ahora.add(Duration(hours: horas));
-    print("Ahora:   $ahora");
-    print("Con desplazamiento indicado: $futura  (horas avanzadas: $horas)");
+void mostrarConDesplazamiento(int horas) {
+  //Fecha y hora actuales
+  final ahora = DateTime.now(); 
+  //Suma horas introducidas
+  final futura = ahora.add(Duration(hours: horas));
+
+  print("Hora actual: $ahora");
+  print("Hora con desplazamiento $horas h: $futura");
 }
-mostrarConDesplazamiento(5);
+
+void main() {
+  mostrarConDesplazamiento(3);  
+  mostrarConDesplazamiento(-3); 
 }

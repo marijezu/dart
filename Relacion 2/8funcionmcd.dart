@@ -3,16 +3,24 @@ enteros positivos utilizando el algoritmo de Euclides. Los dos números serán p
 entrada, y la función devolverá el resultado al punto de la llamada. Ambos números serán
 inicializados en el propio programa.*/
 
-void main(){
-  int mcd(int a, int b) {
-    while (b != 0) {
-      final r = a % b;
-      a = b;
-      b = r;
-    }
-    return a;
+int mcd(int a, int b) {
+  while (b != 0) {
+    //Calculo el resto de la division
+    final r = a % b;
+    //El divisor pasa a ser el nuevo dividendo
+    a = b;
+    //El resto pasa a ser el nuevo divisor
+    b = r;
   }
+  return a;
+}
 
-  print(mcd(2, 6));
+void main() {
+  int num1 = 12;
+  int num2 = 7;
+
+  int resultado = mcd(num1, num2);
+
+  print("El MCD de $num1 y $num2 es: $resultado");
 }
 

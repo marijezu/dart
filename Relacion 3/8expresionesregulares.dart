@@ -11,7 +11,6 @@ import 'dart:io';
 bool esColorRGB(String texto) {
 
   bool esValido = false;
-
   // Defino la expresión regular:
   // Empieza por #, seguida de 3 o 6 caracteres hexadecimales (0-9, a-f, A-F)
   RegExp patronColor = RegExp(r'^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$');

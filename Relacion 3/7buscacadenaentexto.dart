@@ -11,7 +11,7 @@ void main() {
 
   // Compruebo que la frase no sea nula ni vacía
   if (frase == null || frase.isEmpty) {
-    print("No has escrito ninguna frase 😅");
+    print("No has escrito ninguna frase");
   } else {
     // Le pido ahora que escriba una subcadena (el texto que quiero buscar)
     stdout.write("Escribe una subcadena que quieras buscar dentro de la frase: ");
@@ -19,7 +19,7 @@ void main() {
 
     // Compruebo también que la subcadena no sea nula ni vacía
     if (subcadena == null || subcadena.isEmpty) {
-      print("No has escrito ninguna subcadena 😅");
+      print("No has escrito ninguna subcadena");
     } else {
       // Busco la posición donde aparece por primera vez la subcadena
       int primeraPos = frase.indexOf(subcadena);

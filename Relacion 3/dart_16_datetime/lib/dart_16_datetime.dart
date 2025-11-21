@@ -1,5 +1,4 @@
 import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
 
 
 //Metodo que devuelve la fecha y hora actual
